@@ -74,10 +74,11 @@ describe ('Tree practice', function () {
       userID1 = socialNetwork.addUser("User 1");
       userID2 = socialNetwork.addUser("User 2");
 
+      
       expect(socialNetwork.follows[userID1].size).to.equal(0);
-
+      
       expect(socialNetwork.follow(userID1, userID2)).to.be.true;
-
+      
       expect(socialNetwork.follows[userID1].size).to.equal(1);
       expect(socialNetwork.follows[userID1]).to.have.keys([2]);
 
